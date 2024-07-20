@@ -2,8 +2,8 @@ cc_library(
     name = "libusb",
     srcs = glob(["libusb/*.c"]),
     hdrs = glob(["libusb/*.h"]),
-    includes = ["libusb", "."],
+    includes = ["."],
     visibility = ["//visibility:public"],
-    copts = ["-Iexternal/libusb/libusb", "-Iexternal/libusb"]
+    linkopts = ["-lusb-1.0"],
 )
 

@@ -3,6 +3,6 @@ load("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
 http_archive(
     name = "libusb",
     urls = ["https://github.com/libusb/libusb/archive/refs/tags/v1.0.27.tar.gz"],
-    build_file = "//libusb:BUILD",
+    build_file = "//app/libusb:libusb",
     strip_prefix = "libusb-1.0.27",
 )

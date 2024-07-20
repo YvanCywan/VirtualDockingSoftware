@@ -1,0 +1,18 @@
+plugins {
+    id 'cpp-application'
+    id 'cpp-unit-test'
+}
+
+application {
+    targetMachines.add(machines.linux.x86_64)
+    source.from fileTree('src/main/cpp')
+}
+
+task conanInstall(type: Exec) {
+    commandLine 'conan', 'install', '.', '-r=conancenter'
+}
+
+tasks.named('assemble') {
+    dependsOn conanInstall
+}
+

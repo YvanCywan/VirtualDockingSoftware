@@ -16,3 +16,5 @@ tasks.named('assemble') {
     dependsOn conanInstall
 }
 
+[layout]
+cmake_layout

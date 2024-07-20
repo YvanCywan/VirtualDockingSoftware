@@ -3,16 +3,19 @@
  */
 
 #include <iostream>
-#include <stdlib.h>
 #include "app.h"
-
-std::string VirtualDockingSoftware::Greeter::greeting() {
-    return std::string("Hello, World!");
-}
+#include <libusb-1.0/libusb.h>
 
 int main () {
-    VirtualDockingSoftware::Greeter greeter;
-    std::cout << greeter.greeting() << std::endl;
+    libusb_context *ctx = nullptr;
+    int ret = libusb_init(&ctx);
+
+    if (ret > 0) {
+        std::cerr << "Error Initialising libusb: " << libusb_error_name(ret) << std::endl;
+        return 1;
+    }
+
+    libusb_exit(ctx);
     return 0;
 }
 

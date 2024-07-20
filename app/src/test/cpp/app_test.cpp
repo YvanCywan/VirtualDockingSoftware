@@ -7,7 +7,5 @@
 #include <iostream>
 
 int main() {
-    VirtualDockingSoftware::Greeter greeter;
-    assert(greeter.greeting().compare("Hello, World!") == 0);
     return 0;
 }

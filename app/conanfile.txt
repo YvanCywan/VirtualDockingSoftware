@@ -9,3 +9,6 @@ cmake/3.23.0
 [generators]
 CMakeDeps
 CMakeToolchain
+
+[layout]
+cmake_layout

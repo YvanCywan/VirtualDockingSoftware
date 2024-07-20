@@ -1,5 +1,6 @@
 [requires]
 fmt/8.0.1
+libusb/1.0.24
 
 [generators]
 CMakeToolchain

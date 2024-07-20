@@ -5,4 +5,8 @@
 build
 
 .idea
-.idea/**/*
+.idea/**/*s
+
+*conan*
+*cmake*
+*CMake*

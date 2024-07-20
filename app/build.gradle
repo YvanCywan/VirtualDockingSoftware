@@ -9,7 +9,7 @@ application {
 }
 
 task conanInstall(type: Exec) {
-    commandLine 'conan', 'install', '.', '-r=conancenter'
+    commandLine 'conan', 'install', '.', '--build=misisng', '-r=conancenter'
 }
 
 tasks.named('assemble') {
